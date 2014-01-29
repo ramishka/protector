@@ -1,0 +1,1 @@
+Negativereps = new Meteor.Collection('negativereps');

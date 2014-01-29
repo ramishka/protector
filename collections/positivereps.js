@@ -1,0 +1,1 @@
+Positivereps = new Meteor.Collection('positivereps');

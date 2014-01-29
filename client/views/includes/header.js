@@ -6,5 +6,10 @@ Template.header.helpers({
 			return Router.current().route.name === name
 		});
 		return active && 'active';
+	},
+
+	categories : function() {
+		return Categories.find();
 	}
+
 });

@@ -1,9 +1,24 @@
 // Fixture data
 if (Posts.find().count() === 0) {
-    
+
     var now = new Date().getTime();
+
+    //Create default categories
+
+    //Monetary Aid Category
+    var catMoaidId = Categories.insert({
+        name : "Monetary Aid"
+    });
+    //Gift Category
+    var catGiftId = Categories.insert({
+        name : "Gifts"
+    });
+    //Volunteer Category
+    var catVolunteerId = Categories.insert({
+        name : "Volunteer"
+    });
     
-    // create two users
+    // Create two users
     var daddyId = Meteor.users.insert({
         profile: {
             name: 'Big Daddy'
@@ -19,21 +34,20 @@ if (Posts.find().count() === 0) {
     var sister = Meteor.users.findOne(sisterId);
     
     var telescopeId = Posts.insert({
-        title: 'Introducing Telescope',
+        title: 'Cancer patient needs to raise $500 for medication.',
         userId: sister._id,
         author: sister.profile.name,
-        url: 'http://sistergreif.com/introducing-telescope/',
+        url: 'http://www.believe.in',
         submitted: now - 7 * 3600 * 1000,
         commentsCount: 2,
         upvoters: [],
         votes: 0,
         positiveRepCount : 0,
         negativeRepCount : 0,
-        category : "",
-        description : ""
-
-
+        categoryId : catMoaidId,
+        description : "This patient requires an injection course that consists of 10 injections. Each injection costs $50."
     });
+
     Comments.insert({
         postId: telescopeId,
         userId: daddy._id,
@@ -49,28 +63,7 @@ if (Posts.find().count() === 0) {
         body: 'Yep. Bank account details are up to date.'
     });
 
-    Posts.insert({
-        title: 'Meteor',
-        userId: daddy._id,
-        author: daddy.profile.name,
-        url: 'http://meteor.com',
-        submitted: now - 10 * 3600 * 1000,
-        commentsCount: 0,
-        upvoters: [],
-        votes: 0
-    });
-    Posts.insert({
-        title: 'The Meteor Book',
-        userId: daddy._id,
-        author: daddy.profile.name,
-        url: 'http://themeteorbook.com',
-        submitted: now - 12 * 3600 * 1000,
-        commentsCount: 0,
-        upvoters: [],
-        votes: 0
-    });
-
-    for (var i = 0; i < 10; i++) {
+    /*for (var i = 0; i < 10; i++) {
         Posts.insert({
             title: 'Test post #' + i,
             author: sister.profile.name,
@@ -81,5 +74,5 @@ if (Posts.find().count() === 0) {
             upvoters: [],
             votes: 0
         });
-    }
+    }*/
 }

@@ -7,15 +7,15 @@ if (Posts.find().count() === 0) {
 
     //Monetary Aid Category
     var catMoaidId = Categories.insert({
-        name : "Monetary Aid"
+        name : "Monetary Donation"
     });
     //Gift Category
     var catGiftId = Categories.insert({
-        name : "Gifts"
+        name : "Gift"
     });
     //Volunteer Category
     var catVolunteerId = Categories.insert({
-        name : "Volunteer"
+        name : "Volunteer Work"
     });
     
     // Create two users

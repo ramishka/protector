@@ -1,12 +1,20 @@
+
+var selectedButtonId;
+
 Template.postSubmit.events({
     'submit form': function(e) {
         e.preventDefault();
 
         //Create a new posts object
         var post = {
-            url: $(e.target).find('[name=url]').val(),
+            
             title: $(e.target).find('[name=title]').val(),
-            message: $(e.target).find('[name=message]').val()
+            description : $(e.target).find('[name=description]').val(),
+            address: $(e.target).find('[name=address]').val(),
+            contactNo: $(e.target).find('[name=contactNo]').val(),
+            bankAccount: $(e.target).find('[name=bankAccount]').val(),
+            url: $(e.target).find('[name=url]').val(),
+            category: selectedButtonId    
         }
 
         //Call server Method
@@ -20,8 +28,14 @@ Template.postSubmit.events({
                 Router.go('postPage', { _id: id });
             }
         });
+    },
+    'click .btn' : function(e) {
 
-
+        if ( $(e.currentTarget).val() != "Submit" ) {
+            e.preventDefault();
+            selectedButtonId = e.currentTarget; //Update the selected button id on click
+            //alert( $(selectedButtonId).val() );
+        }
     }
 });
 

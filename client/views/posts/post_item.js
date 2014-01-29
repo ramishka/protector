@@ -10,6 +10,16 @@ Template.postItem.helpers({
 		return a.hostname;
 	},
 
+	shortDescription : function () {
+   		var maxLengthInPostsList = 250; 
+
+   		if ( !_.isUndefined(this.description) && !_.isNull( this.description) && this.description.length > maxLengthInPostsList ) {
+   			return this.description.substring(0, maxLengthInPostsList) + '...';
+   		} else {
+   			return this.description;
+   		}
+	}, 
+
 	upvotedClass: function() {
 		var userId = Meteor.userId();
 		if (userId && !_.include(this.upvoters, userId)) {

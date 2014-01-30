@@ -1,9 +1,11 @@
 <template name="postVouch">
 	<form name="comment" class="comment-form">
 		<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3><span>{{shortDescription}}</span>
+		{{positiveRepCount}} vouched for this aid request.
+		{{negativeRepCount}} flagged this request.
 		<div class="control-group">
 			<div class="controls">
-				<label for="body">Why do you vouch for this aid request?</label>
+				<label for="body">Why do you vouch for this?</label>
 				<textarea name="body"></textarea>
 			</div>
 		</div>

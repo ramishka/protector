@@ -17,3 +17,15 @@
 		</a>
 	</li>
 </template>
+
+<template name="categoryButtonGroup">		
+		<div class="btn-group" data-toggle="buttons-radio">
+			{{#each categories}}			
+				{{> categoryButton}}
+			{{/each}}
+		</div>
+</template>
+
+<template name="categoryButton">
+	<button type="button" class="btn" name={{this.uname}} value={{this.uname}}>{{this.name}}</button>
+</template>

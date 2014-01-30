@@ -10,3 +10,9 @@ Template.category.helpers({
 		return Router.routes.postPage.path({_id: this.postId});
 	}
 });
+
+Template.categoryButtonGroup.helpers({
+	categories: function() {
+		return Categories.find();
+	}	
+});

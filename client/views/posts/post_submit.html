@@ -2,18 +2,46 @@
     <form class="main">
         
         <div class="control-group">
+             <label class="control-label" for="typeOfAid">Type of Aid Needed</label>
+            <div class="controls">
+                {{>categoryButtonGroup}}
+            </div>
+        </div>
+        
+        <div class="control-group">
             <label class="control-label" for="title">Title<span>*</span></label>
             <div class="controls">
                 <input name="title" type="text" value="" placeholder="Name your post" />
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="message">Description<span>*</span></label>
+            <label class="control-label" for="description">Description<span>*</span></label>
             <div class="controls">
-                <textarea name="message" type="text" value="" />
+                <textarea name="description" type="text" value="" />
             </div>
         </div>
 
+        <div class="control-group">
+            <label class="control-label" for="address">Address</label>
+            <div class="controls">
+                <textarea name="address" type="text" value="" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="bankAccount">Bank Account Details</label>
+            <div class="controls">
+                <textarea name="bankAccount" type="text" value="" placeholder="" />
+            </div>
+        </div>
+
+         <div class="control-group">
+            <label class="control-label" for="contactNo">Contact Number</label>
+            <div class="controls">
+                <input name="contactNo" type="text" value="" placeholder="" />
+            </div>
+        </div>
+        
         <div class="control-group">
             <label class="control-label" for="url">URL</label>
             <div class="controls">
@@ -26,5 +54,6 @@
                 <input type="submit" value="Submit" class="btn btn-primary" />
             </div>
         </div>
+
     </form>
 </template>

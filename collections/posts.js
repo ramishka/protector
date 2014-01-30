@@ -16,9 +16,17 @@ Meteor.methods({
 
 post: function(postAttributes) {
     var user = Meteor.user(),
-        postWithSameLink = Posts.findOne({
-            url: postAttributes.url
+        postWithSameAccountNumber = Posts.findOne({
+            bankAccount: postAttributes.bankAccount
         });
+    
+    //Fetch category data - FIXME: This call is unnecessary
+    var categoryData;  
+    if ( !_.isNull( postAttributes.category ) ){
+        categoryData = Categories.findOne ( { uname : postAttributes.category } );
+    } else {
+        categoryData = Categories.findOne ( { uname : "MONETARY" } );
+    }
 
     // ensure the user is logged in
     if (!user)
@@ -26,25 +34,30 @@ post: function(postAttributes) {
 
     // ensure the post has a title
     if (!postAttributes.title)
-        throw new Meteor.Error(422, 'Please fill in a headline');
+        throw new Meteor.Error(422, 'Please fill in a title.');
 
     // check that there are no previous posts with the same link
-    if (postAttributes.url && postWithSameLink) {
+    if (postAttributes.url && postWithSameAccountNumber) {
         throw new Meteor.Error(302, //Error code
-            'This link has already been posted', //Error reason
-            postWithSameLink._id); //additional info
+            'Aid request for the same bank account number was found. Entering multiple requests for the same bank account number is not allowed.', //Error reason
+            postWithSameAccountNumber._id); //additional info
     }
 
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
+    var post = _.extend(_.pick(postAttributes, 'title', 'description', 'address', 'contactNo', 'bankAccount', 'url'  ), {
         userId: user._id,
         author: user.username,
         submitted: new Date().getTime(),
-        commentsCount: 0,
+        commentsCount: 0,          
+        positiveRepCount : 0,
+        postiverReppers : [],
+        negativeRepCount : 0,
+        negativeReppers : [],
+        votes: 0,
         upvoters: [],
-        votes: 0
+        categoryId : categoryData.uname
+        
     });
-
 
     //Update DB,
     var postId = Posts.insert(post);

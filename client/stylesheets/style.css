@@ -128,7 +128,7 @@ body {
     display: block;
     height: 80px;
     width:200px;
-    margin: 14px 0 14px 0;
+    margin:0;
     overflow: hidden;
     position: relative;
     text-indent: -999em;
@@ -163,6 +163,7 @@ body {
 
 .nav-collapse.collapse{
     margin-left: 70px;
+    margin-top: 39px;
     width: 75%;
 }
 
@@ -170,17 +171,42 @@ body {
   margin: 0 10px 0 0;
 }
 
-.navbar .nav > li > a {
-    background:linear-gradient(to bottom, #FFFFFF, #E6E6E6) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+
+body {
+    color: #222222;
+}
+li.g, body, html, .std, h1 {
+    font-family: arial,sans-serif;
+    font-size: small;
+}
+body, #leftnav, #tbdi, #hidden_modes, #hmp {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+body {
+    color: #000000;
     margin: 0;
+    overflow-y: scroll;
+}
+li.g, body, html, .std, h1 {
+    font-family: arial,sans-serif;
+    font-size: small;
+}
+.navbar .nav > li > a {
+    background-color: #DDDDDD;
+    background-image: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC);
+    color: #333333;
+    margin: 0 6px;
     padding: 10px 22px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid #AAAAAA;
+    border-bottom:none;
+    border-radius: 3px 3px 0 0;
 }
 
 .banner{
-     background: url("../../images/banner.jpg") repeat scroll 0 0;
+    <!--- background: url("../../images/banner.jpg") repeat scroll 0 0;
      height:164px;
-     opacity: 0.4;
+     opacity: 0.4;   --->
 }
 
 .navbar .nav.pull-right{
@@ -189,7 +215,9 @@ body {
 
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    color: #25A4D6;
+    background: none repeat scroll 0 0 #B8B8B8;
+    border-color: #777777;
+    color: #000000;
 }
 
 .post .post-content h3 a {

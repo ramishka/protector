@@ -7,15 +7,15 @@ if (Posts.find().count() === 0) {
 
     //Monetary Aid Category
     var catMoaidId = Categories.insert({
-        name : "Monetary Aid"
+        name : "Monetary Donation", uname : "MONETARY"
     });
     //Gift Category
     var catGiftId = Categories.insert({
-        name : "Gifts"
+        name : "Gift", uname : "GIFT"
     });
     //Volunteer Category
     var catVolunteerId = Categories.insert({
-        name : "Volunteer"
+        name : "Volunteer Work", uname : "VOLUNTEER"
     });
     
     // Create two users
@@ -44,7 +44,7 @@ if (Posts.find().count() === 0) {
         votes: 0,
         positiveRepCount : 0,
         negativeRepCount : 0,
-        categoryId : catMoaidId,
+        categoryId : "MONETARY",
         description : "This patient requires an injection course that consists of 10 injections. Each injection costs $50."
     });
 

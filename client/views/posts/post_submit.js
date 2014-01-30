@@ -1,13 +1,24 @@
+
+var selectedButtonId;
+
 Template.postSubmit.events({
     'submit form': function(e) {
         e.preventDefault();
 
         //Create a new posts object
         var post = {
-            url: $(e.target).find('[name=url]').val(),
+            
             title: $(e.target).find('[name=title]').val(),
-            message: $(e.target).find('[name=message]').val()
+            description : $(e.target).find('[name=description]').val(),
+            address: $(e.target).find('[name=address]').val(),
+            contactNo: $(e.target).find('[name=contactNo]').val(),
+            bankAccount: $(e.target).find('[name=bankAccount]').val(),
+            url: $(e.target).find('[name=url]').val(),
+            category: selectedButtonId    
         }
+
+        //alert ('calling getCategoryName' + post.category );
+        //Meteor.call ('getCategoryName', post, categoryNameCallback );
 
         //Call server Method
         Meteor.call('post', post, function(error, id) { //This maps to a method in posts.js //methodName, dataParam, callback function
@@ -20,9 +31,22 @@ Template.postSubmit.events({
                 Router.go('postPage', { _id: id });
             }
         });
+    },
+    'click .btn' : function(e) {
 
-
+        if ( $(e.currentTarget).val() != "Submit" ) {
+            e.preventDefault();
+            selectedButtonId = e.currentTarget //Update the selected button id on click
+            selectedButtonId = $(selectedButtonId).val();
+            //alert( 'selected val ' + selectedButtonId );
+        }
     }
 });
+
+function categoryNameCallback ( postAttributes )
+{   
+    alert ('categoryNameCallback called' + postAttributes.title );
+}
+
 
 

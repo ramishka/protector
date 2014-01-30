@@ -18,3 +18,11 @@ Meteor.publish('notifications', function() {
 Meteor.publish('categories', function() {
   return Categories.find();
 });
+
+Meteor.publish('positivereps', function() {
+  return Positivereps.find();
+});
+
+Meteor.publish('negativereps', function() {
+  return Negativereps.find();
+});

@@ -17,9 +17,6 @@ Template.postSubmit.events({
             category: selectedButtonId    
         }
 
-        //alert ('calling getCategoryName' + post.category );
-        //Meteor.call ('getCategoryName', post, categoryNameCallback );
-
         //Call server Method
         Meteor.call('post', post, function(error, id) { //This maps to a method in posts.js //methodName, dataParam, callback function
             if (error) {
@@ -42,11 +39,5 @@ Template.postSubmit.events({
         }
     }
 });
-
-function categoryNameCallback ( postAttributes )
-{   
-    alert ('categoryNameCallback called' + postAttributes.title );
-}
-
 
 

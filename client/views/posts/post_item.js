@@ -55,7 +55,7 @@ Template.postItem.helpers({
 	twitterShareLink : function () {
 		return 'http://twitter.com/intent/tweet?text=' + this.title + ' ' + Router.routes['postPage'].url({_id: this._id });
 	},
-
+	//tumblr
 	linkedinShareLink : function () {
 
 		return 'http://www.linkedin.com/shareArticle?mini=true&url=' + Router.routes['postPage'].url({_id: this._id });
@@ -78,7 +78,7 @@ Template.postItem.events({
 	'click .positiveReppable': function(e) { //invoke on upvokable button class
 		//e.preventDefault();
 		//Meteor.call('upvote', this._id);
-		//Router.go('postVouch'); //do routing here
+		//Router.go('postsList'); //do routing here
 	},
 
 	'click .negativeReppable': function(e) { //invoke on upvokable button class

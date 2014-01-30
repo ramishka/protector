@@ -339,3 +339,33 @@ body {
     line-height: 1.5em;
     width: 28%;
 }
+
+.social-icons .facebook {
+    background: url("../../images/facebook.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.social-icons .twitter{
+    background: url("../../images/twitter.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.social-icons .gplus{
+    background: url("../../images/gplus.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);  
+}
+
+.social-icons .linkedIn {
+    background: url("../../images/linkedIn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); 
+}
+
+.social-icons{
+    margin-left:18px;
+}
+
+.social-icons .btn-1{
+  width:48px;
+  height:48px;
+  margin: 10px;
+  overflow: hidden;
+  text-indent: -999em;
+  
+}
+

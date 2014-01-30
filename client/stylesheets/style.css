@@ -1,19 +1,21 @@
 .grid-block, .main, .post, .comments li, .comment-form {
     background: #fff;
     border-radius: 3px;
-    padding: 10px;
+    padding:30px;
     margin-bottom: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 body {
     background:url("../../images/body-back.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     color: #666666;
+    font-family:arial;
 }
 .navbar {
     margin-bottom: 10px
 }
 .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px;
+    padding-left:0;
 }
 #spinner {
     height: 300px
@@ -70,10 +72,13 @@ body {
 .post .post-content p {
     margin: 0
 }
+
 .post .discuss {
     display: block;
     float: right;
+    margin-left: 12px;
     margin-top: 7px;
+    padding: 6px 12px;
 }
 .comments {
     list-style-type: none;
@@ -122,15 +127,14 @@ body {
     background: url("../../images/logo.png") no-repeat scroll 0 0;
     display: block;
     height: 80px;
-    width:110px;
-    margin: 10px 0 10px 0;
+    width:200px;
+    margin: 14px 0 14px 0;
     overflow: hidden;
     position: relative;
     text-indent: -999em;
 }
 
 .navbar-inner{
-  background:#ffffff;
   border:none;
   box-shadow:none;
 }
@@ -141,8 +145,9 @@ body {
 
 .container{
     border: 1px solid #dddddd;
-    border-top:3px solid #25A4D6;
+    border-top:3px solid #bcb9b9;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    margin-top:20px;
 }
 
 .post{
@@ -157,21 +162,25 @@ body {
 }
 
 .nav-collapse.collapse{
-    margin-left: 50px;
-    width: 85%;
+    margin-left: 70px;
+    width: 75%;
 }
 
 .navbar .nav{
-  margin: 38px 10px 0 0;
+  margin: 0 10px 0 0;
 }
 
-.navbar .nav > li > a{
-  padding: 10px 36px;
+.navbar .nav > li > a {
+    background:linear-gradient(to bottom, #FFFFFF, #E6E6E6) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px 22px;
 }
 
 .banner{
      background: url("../../images/banner.jpg") repeat scroll 0 0;
      height:164px;
+     opacity: 0.4;
 }
 
 .navbar .nav.pull-right{
@@ -185,4 +194,46 @@ body {
 
 .post .post-content h3 a {
     color: #25A4D6;
+}
+
+.navbar .nav > li#login-dropdown-list a{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    box-shadow: none;
+}
+
+/*---submit post---*/
+
+.control-group {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.main label {
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    width: 10%;
+}
+
+.main .control-group input,
+.main .control-group textarea{
+  width:300px;
+}
+
+.main .control-group .btn{
+      margin-left: 200px;
+    padding: 12px 0;
+    width: 126px;
+}
+
+.main .control-group input:hover,
+.main .control-group textarea:hover{
+    border-color:#a9a9a9;
+    border-width:1px;
+}
+
+.control-label span{
+      color: #FF0000;
+      padding-left: 2px;
 }

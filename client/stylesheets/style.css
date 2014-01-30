@@ -51,8 +51,9 @@ body {
     margin: 7px 12px 0 0;
     float: left;
 }
-.post .post-content {
-    float: left
+.post .post-content,
+.post-content-inner{
+    width:100%;
 }
 .post .post-content h3 {
     margin: 0;
@@ -71,6 +72,11 @@ body {
 }
 .post .post-content p {
     margin: 0
+}
+
+.post-discription{
+    width:70%;
+    padding-left:30px;
 }
 
 .post .discuss {
@@ -141,6 +147,8 @@ body {
 
 .navbar {
     margin-bottom:0;
+    background: #e2e2e2;
+    padding-bottom: 8px;
 }
 
 .container{
@@ -151,7 +159,7 @@ body {
 }
 
 .post{
-  padding-top:75px;
+  padding:30px 0 0 0;
   margin-bottom:0;
 }
 
@@ -163,34 +171,13 @@ body {
 
 .nav-collapse.collapse{
     margin-left: 70px;
-    margin-top: 39px;
     width: 75%;
 }
 
 .navbar .nav{
-  margin: 0 10px 0 0;
+  margin:39px 10px 0 0;
 }
 
-
-body {
-    color: #222222;
-}
-li.g, body, html, .std, h1 {
-    font-family: arial,sans-serif;
-    font-size: small;
-}
-body, #leftnav, #tbdi, #hidden_modes, #hmp {
-    background: none repeat scroll 0 0 #FFFFFF;
-}
-body {
-    color: #000000;
-    margin: 0;
-    overflow-y: scroll;
-}
-li.g, body, html, .std, h1 {
-    font-family: arial,sans-serif;
-    font-size: small;
-}
 .navbar .nav > li > a {
     background-color: #DDDDDD;
     background-image: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC);
@@ -215,9 +202,10 @@ li.g, body, html, .std, h1 {
 
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    background: none repeat scroll 0 0 #B8B8B8;
+    background-image:-moz-linear-gradient(center top , #D6D6D6, #5B5D5E);
     border-color: #777777;
-    color: #000000;
+    color: #ffffff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .post .post-content h3 a {
@@ -265,3 +253,29 @@ li.g, body, html, .std, h1 {
       color: #FF0000;
       padding-left: 2px;
 }
+
+.donate{
+  width:30px;
+}
+
+.donate .btn{
+      background:-moz-linear-gradient(0% 100% 90deg, #377AD0, #52A8E8) repeat scroll 0 0 ;
+    border: 1px solid;
+    border-color:#4081AF #2E69A3 #20559A;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 1.4em;
+    padding: 14px 60px;
+    margin:10px 0 0 55px;
+}
+
+.post-bottom{
+      background: none repeat scroll 0 0 #F2F2F2;
+    border-top: 1px solid #E4E4E4;
+    float: left;
+    width: 100%;
+    margin-top:20px;
+}
+
+.post:o

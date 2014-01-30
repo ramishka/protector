@@ -49,11 +49,11 @@ Template.postItem.helpers({
 
 	facebookShareLink : function () {
 		
-		return 'http://www.google.com';// + getPostPageURL();
+		return 'http://www.facebook.com/sharer/sharer.php?u=' + Router.routes['postPage'].url({_id: this._id });
 	},
 
 	twitterShareLink : function () {
-		return 'http://www.google.com';
+		return 'http://twitter.com/intent/tweet?text=' + this.title + ' ' + Router.routes['postPage'].url({_id: this._id });
 	},
 
 	linkedinShareLink : function () {
@@ -63,10 +63,8 @@ Template.postItem.helpers({
 	},
 
 	gplusShareLink : function () {
-		return 'http://www.google.com';
+		return 'https://plus.google.com/share?url=' + Router.routes['postPage'].url({_id: this._id });
 	}
-
-	
 	
 });
 

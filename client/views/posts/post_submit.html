@@ -1,13 +1,15 @@
 <template name="postSubmit">
     <form class="main">
         
-        <div class="control-group">
+        <div class="control-group control-submit">
              <label class="control-label header-text" for="typeOfAid">Type of Aid</label>
             <div class="controls">
                 {{>categoryButtonGroup}}
             </div>
         </div>
-        
+      
+      <div class="control-submit-form">
+       <div class="control-submit-form-left pull-left">  
         <div class="control-group">
             <label class="control-label" for="title">Title<span>*</span></label>
             <div class="controls">
@@ -27,7 +29,8 @@
                 <textarea name="address" type="text" value="" />
             </div>
         </div>
-
+        </div>
+        <div class="control-submit-form-right">
         <div class="control-group">
             <label class="control-label" for="bankAccount">Bank Account Details</label>
             <div class="controls">
@@ -48,12 +51,14 @@
                 <input name="url" type="text" value="" placeholder="Related external links" />
             </div>
         </div>
-
-        <div class="control-group">
+        </div>
+        <div class="control-group control-group-submit">
             <div class="controls">
                 <input type="submit" value="Submit" class="btn btn-primary" />
             </div>
         </div>
+      </div>   
+   
 
     </form>
 </template>

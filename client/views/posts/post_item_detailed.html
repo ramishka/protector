@@ -9,8 +9,8 @@
 				    {{positiveRepCount}} vouched for this request.
 				    {{negativeRepCount}} flagged this request.
 			      </p>
-			      <p>	
-				      submitted by {{author}},
+			      <p><span class="submit">	
+              submitted by {{author}}, </span>
 				      <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
 				       {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
 			      </p>
@@ -20,22 +20,22 @@
          </div> 
       </div>
 
-      <div class="post-detail" style="float:left; margin-left:30px;">
-      	<table style="float:left; margin-top:15px;">
+      <div class="post-detail">
+      	<table class="pull-left">
       		<tr>
-      			<td width="120px">Description :</td><td>{{description}}</td>
+      			<td class="t-1">Description :</td><td class="t-2">{{description}}</td>
       		</tr>
       		<tr>
-      			<td>Address :</td><td>{{address}}</td>
+      			<td class="t-1">Address :</td><td class="t-2">{{address}}</td>
       		</tr>
       		<tr>
-      			<td>Bank Account :</td><td>{{bankAccount}}</td>
+      			<td class="t-1">Bank Account :</td><td class="t-2">{{bankAccount}}</td>
       		</tr>
       		<tr>
-      			<td>Contact No :</td><td>{{contactNo}} </td>
+      			<td class="t-1">Contact No :</td><td class="t-2">{{contactNo}} </td>
       		</tr>
       		<tr>
-      			<td>URL :</td><td>{{url}} </td>
+      			<td class="t-1">URL :</td><td class="t-2">{{url}} </td>
       		</tr>
       	</table>
       	

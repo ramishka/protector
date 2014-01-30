@@ -1,3 +1,5 @@
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+
 .grid-block, .main, .post, .comments li, .comment-form {
     background: #fff;
     border-radius: 3px;
@@ -16,6 +18,8 @@ body {
 .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px;
     padding-left:0;
+    background-color: #2C3E50;
+    border-color: #202D3B;
 }
 #spinner {
     height: 300px
@@ -143,11 +147,11 @@ body {
 .navbar-inner{
   border:none;
   box-shadow:none;
+  background:none;
 }
 
 .navbar {
     margin-bottom:0;
-    background: #e2e2e2;
     padding-bottom: 8px;
 }
 
@@ -156,6 +160,8 @@ body {
     border-top:3px solid #bcb9b9;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
     margin-top:20px;
+    padding:0;
+    border-radius: 4px 4px 0 0;
 }
 
 .post{
@@ -175,19 +181,25 @@ body {
 }
 
 .navbar .nav{
-  margin:39px 10px 0 0;
+  margin:0 10px 0 0;
+}
+
+.navbar .main-menu > li{
+  line-height:4.2;
 }
 
 .navbar .nav > li > a {
-    background-color: #DDDDDD;
-    background-image: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC);
-    color: #333333;
+    color: #ffffff;
     margin: 0 6px;
-    padding: 10px 22px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-    border: 1px solid #AAAAAA;
-    border-bottom:none;
-    border-radius: 3px 3px 0 0;
+    padding: 10px 20px;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow:none; 
+    font-size:15px;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    background-color: none;
+    color: #cccccc;
 }
 
 .banner{
@@ -202,10 +214,8 @@ body {
 
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    background-image:-moz-linear-gradient(center top , #D6D6D6, #5B5D5E);
-    border-color: #777777;
-    color: #ffffff;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    background:#000000;
+    color:#ffffff;
 }
 
 .post .post-content h3 a {
@@ -259,17 +269,16 @@ body {
 }
 
 .donate .btn{
-      background:-moz-linear-gradient(0% 100% 90deg, #377AD0, #52A8E8) repeat scroll 0 0 ;
-    border: 1px solid;
-    border-color:#4081AF #2E69A3 #20559A;
-    border-radius: 4px;
-    color: #FFFFFF;
-    font-size: 15px;
-    line-height: 1.4em;
     padding: 14px 60px;
     margin:10px 0 0 55px;
+    background-color: #3498DB;
+    border-color: #3498DB;
 }
 
+.donate .btn:hover{
+    background-color: #2383C4;
+    border-color: #2077B2;
+}
 .post-bottom{
       background: none repeat scroll 0 0 #F2F2F2;
     border-top: 1px solid #E4E4E4;
@@ -278,4 +287,34 @@ body {
     margin-top:20px;
 }
 
-.post:o
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #ffffff;
+    border-top-color: #ffffff;
+    margin-top: 30px;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.navbar .nav li.dropdown > a:hover .caret, .navbar .nav li.dropdown > a:focus .caret {
+    border-bottom-color: #cccccc;
+    border-top-color: #cccccc;
+}
+
+.navbar .nav #login-dropdown-list li.dropdown > .dropdown-toggle .caret{
+    margin-top:0;
+}

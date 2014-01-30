@@ -86,8 +86,6 @@ body {
 .post .discuss {
     display: block;
     float: right;
-    margin-left: 12px;
-    margin-top: 7px;
     padding: 6px 12px;
 }
 .comments {
@@ -357,15 +355,48 @@ body {
 }
 
 .social-icons{
-    margin-left:18px;
+    margin-left:24px;
+}
+
+.social-icons a{
+      opacity:0.6;
+}
+
+.social-icons a:hover{
+    opacity:1;
 }
 
 .social-icons .btn-1{
-  width:48px;
-  height:48px;
-  margin: 10px;
+  width:34px;
+  height:34px;
+  margin: 5px;
   overflow: hidden;
   text-indent: -999em;
   
 }
 
+.vouch{
+   background: url("../../images/thumb-up.png") no-repeat scroll 10px 4px rgba(0, 0, 0, 0); 
+}
+
+.flag{
+   background: url("../../images/thumb-down.png") no-repeat scroll 10px 4px rgba(0, 0, 0, 0); 
+}
+
+.discuss{
+    border: 1px solid #E4E4E4;
+    border-top:none;
+    border-bottom:none;
+    height: 32px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 22px;
+}
+
+.vote{
+  margin-right:10px;
+}
+
+a.discuss:hover{
+  background-color:#cccccc;
+}

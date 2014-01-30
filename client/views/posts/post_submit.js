@@ -17,6 +17,9 @@ Template.postSubmit.events({
             category: selectedButtonId    
         }
 
+        //alert ('calling getCategoryName' + post.category );
+        //Meteor.call ('getCategoryName', post, categoryNameCallback );
+
         //Call server Method
         Meteor.call('post', post, function(error, id) { //This maps to a method in posts.js //methodName, dataParam, callback function
             if (error) {
@@ -33,10 +36,17 @@ Template.postSubmit.events({
 
         if ( $(e.currentTarget).val() != "Submit" ) {
             e.preventDefault();
-            selectedButtonId = e.currentTarget; //Update the selected button id on click
-            //alert( $(selectedButtonId).val() );
+            selectedButtonId = e.currentTarget //Update the selected button id on click
+            selectedButtonId = $(selectedButtonId).val();
+            //alert( 'selected val ' + selectedButtonId );
         }
     }
 });
+
+function categoryNameCallback ( postAttributes )
+{   
+    alert ('categoryNameCallback called' + postAttributes.title );
+}
+
 
 

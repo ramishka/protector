@@ -19,12 +19,13 @@ post: function(postAttributes) {
         postWithSameAccountNumber = Posts.findOne({
             bankAccount: postAttributes.bankAccount
         });
-
-    var categoryName;  
+    
+    //Fetch category data - FIXME: This call is unnecessary
+    var categoryData;  
     if ( !_.isNull( postAttributes.category ) ){
-        categoryName = Categories.find ( { name : postAttributes.category } );
+        categoryData = Categories.findOne ( { uname : postAttributes.category } );
     } else {
-        categoryName = Categories.find ( { name : "Monetary Donation" } );
+        categoryData = Categories.findOne ( { uname : "MONETARY" } );
     }
 
     // ensure the user is logged in
@@ -53,7 +54,8 @@ post: function(postAttributes) {
         negativeRepCount : 0,
         negativeReppers : [],
         votes: 0,
-        upvoters: []
+        upvoters: [],
+        categoryId : categoryData.uname
         
     });
 

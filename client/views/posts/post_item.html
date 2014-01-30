@@ -3,6 +3,13 @@
 		<!--<a href="#" class="upvote btn {{upvotedClass}}">⬆</a>-->
 		<div class="post-content">
 			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3><span>{{shortDescription}}</span>
+			
+
+			<p>	<!--{{pluralize votes "Vote"}},-->  <!--Value for votes comes from the posts var--> <!--Pluralize is a handlebars.jsfnction-->
+				2 vouched for this request.
+				1 flagged this request.
+			</p>
+
 			<p>	<!--{{pluralize votes "Vote"}},-->  <!--Value for votes comes from the posts variable--> <!--Pluralize is a handlebars.js global function-->
 				submitted by {{author}},
 				<a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
@@ -14,7 +21,7 @@
 			<a href="{{pathFor 'postPage'}}" class="btn pull-left">Share</a>
 
 		</div>
-		<a href="{{pathFor 'postPage'}}" class="discuss btn btn-danger">Flag</a>
-		<a href="{{pathFor 'postPage'}}" class="discuss btn btn-success">Vouch</a>		
+		<a href="{{pathFor 'postPage'}}" class="discuss btn {{negativeRepClass}}">Flag</a>
+		<a href="{{pathFor 'postPage'}}" class="discuss btn {{positiveRepClass}}">Vouch</a>		
 	</div>
 </template>

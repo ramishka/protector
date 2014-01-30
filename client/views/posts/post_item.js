@@ -45,10 +45,31 @@ Template.postItem.helpers({
 		} else {
 			return 'disabled';
 		}
+	},
+
+	facebookShareLink : function () {
+		
+		return 'http://www.google.com';// + getPostPageURL();
+	},
+
+	twitterShareLink : function () {
+		return 'http://www.google.com';
+	},
+
+	linkedinShareLink : function () {
+
+		return 'http://www.linkedin.com/shareArticle?mini=true&url=' + Router.routes['postPage'].url({_id: this._id });
+
+	},
+
+	gplusShareLink : function () {
+		return 'http://www.google.com';
 	}
 
 	
+	
 });
+
 
 Template.postItem.events({
 	'click .upvotable': function(e) { //invoke on upvokable button class
@@ -57,13 +78,13 @@ Template.postItem.events({
 	},
 
 	'click .positiveReppable': function(e) { //invoke on upvokable button class
-		e.preventDefault();
+		//e.preventDefault();
 		//Meteor.call('upvote', this._id);
-		Router.go('postSubmit'); //do routing here
+		//Router.go('postVouch'); //do routing here
 	},
 
 	'click .negativeReppable': function(e) { //invoke on upvokable button class
-		e.preventDefault();
+		//e.preventDefault();
 		//Meteor.call('upvote', this._id);
 	}
 

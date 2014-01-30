@@ -1,0 +1,16 @@
+<template name="postVouch">
+	<form name="comment" class="comment-form">
+		<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3><span>{{shortDescription}}</span>
+		<div class="control-group">
+			<div class="controls">
+				<label for="body">Why do you vouch for this aid request?</label>
+				<textarea name="body"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn btn-success">Vouch</button>
+			</div>
+		</div>
+	</form>
+</template>

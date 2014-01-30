@@ -13,15 +13,19 @@
 			<p>	<!--{{pluralize votes "Vote"}},-->  <!--Value for votes comes from the posts variable--> <!--Pluralize is a handlebars.js global function-->
 				submitted by {{author}},
 				<a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
-				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}				
+				{{#if ownPost}}<a href="{{pathFor 'postVouch'}}">Edit</a>{{/if}}				
 			</p>
 
 			<a href="{{pathFor 'postPage'}}" class="btn pull-left">Donate</a>
-			<a href="{{pathFor 'postPage'}}" class="btn pull-left">Discuss</a>
-			<a href="{{pathFor 'postPage'}}" class="btn pull-left">Share</a>
+
+
+			<a href="{{facebookShareLink}}" class="btn pull-left">Facebook</a>
+			<a href="{{twitterShareLink}}" class="btn pull-left">Twitter</a>
+			<a href="{{linkedinShareLink}}" class="btn pull-left">LinkedIn</a>
+			<a href="{{gplusShareLink}}" class="btn pull-left">Google+</a>
 
 		</div>
-		<a href="{{pathFor 'postPage'}}" class="discuss btn {{negativeRepClass}}">Flag</a>
-		<a href="{{pathFor 'postPage'}}" class="discuss btn {{positiveRepClass}}">Vouch</a>		
+		<a href="{{pathFor 'postVouch'}}" class="discuss btn {{negativeRepClass}}">Flag</a>
+		<a href="{{pathFor 'postVouch'}}" class="discuss btn {{positiveRepClass}}">Vouch</a>		
 	</div>
 </template>

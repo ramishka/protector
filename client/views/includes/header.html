@@ -16,12 +16,12 @@
                 
                 {{#if currentUser}}
                 <li class="{{activeRouteClass 'postSubmit'}}">
-                    <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+                    <a href="{{pathFor 'postSubmit'}}">Submit New</a>
                 </li>
                 {{/if}}
 
                 <li class="{{activeRouteClass 'home' 'newPosts'}}">
-                    <a href="{{pathFor 'newPosts'}}">New Posts</a>
+                    <a href="{{pathFor 'newPosts'}}">Latest</a>
                 </li>
                 <li class="{{activeRouteClass 'bestPosts'}}">
                     <a href="{{pathFor 'bestPosts'}}">Most Vouched</a>

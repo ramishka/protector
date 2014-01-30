@@ -10,7 +10,7 @@
 body {
     background:url("../../images/body-back.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     color: #666666;
-    font-family:arial;
+    font-family:"Lato","Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 .navbar {
     margin-bottom: 10px
@@ -317,4 +317,25 @@ body {
 
 .navbar .nav #login-dropdown-list li.dropdown > .dropdown-toggle .caret{
     margin-top:0;
+}
+
+.main .control-group .btn:leaf-first{
+   background: none repeat scroll 0 0 #9ABC32;
+}
+
+.main .control-group .btn-group .btn {
+    background: none repeat scroll 0 0 #6FB3E0;
+    color: #FFFFFF;
+    margin-left: 1px;
+    padding: 12px 0;
+    text-shadow: none;
+   border: 1px solid #68A8D2;
+    font-family: "Lato","Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+.main .header-text {
+    color: #2C3E50;
+    font-size: 26px;
+    line-height: 1.5em;
+    width: 28%;
 }

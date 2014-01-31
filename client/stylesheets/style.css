@@ -553,3 +553,11 @@ form{
 .main .control-group .btn-group .btn:focus{
    background-color:#006DCC;
 }
+
+.vote-color{
+   color:#5BB75B;
+}
+
+.vote-color{
+  color:red;
+}

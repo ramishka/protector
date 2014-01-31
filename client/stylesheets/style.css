@@ -548,3 +548,8 @@ form{
 .nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .caret {
     border-top-color: #cccccc;
 }
+
+.main .control-group .btn-group .btn:active,
+.main .control-group .btn-group .btn:focus{
+   background-color:#006DCC;
+}
